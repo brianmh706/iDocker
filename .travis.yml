@@ -1,5 +1,9 @@
 language: objective-c
-xcode_workspace: iDocker
-xcode_scheme: macOS
 osx_image: xcode8.2
-xcode_sdk: macosx10.12
+env:
+    - WORKSPACE=iDocker.xcworkspace
+    - SCHEME=macOS
+    - SDK=macosx10.12
+script:
+    - xcodebuild -workspace $WORKSPACE -scheme $SCHEME -sdk $SDK
+    - xctool -workspace $WORKSPACE -scheme $SCHEME -sdk $SDK run-tests
