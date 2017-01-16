@@ -16,7 +16,6 @@ class WindowController: NSWindowController {
         window?.titlebarAppearsTransparent = true
         window?.isMovableByWindowBackground = true
         window?.styleMask.insert(NSWindowStyleMask.fullSizeContentView)
-        print(window?.contentView?.allowsVibrancy)
     }
 
 }

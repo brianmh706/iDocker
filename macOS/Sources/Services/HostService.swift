@@ -19,7 +19,6 @@ class HostService {
     private let one = "host"
     
     func load() -> [Host] {
-        return [Host(name: "Demo", host: "Demo", port: 0, icon: "NSNetwork", group: "Test")]
         if let decoded = localStore.object(forKey: all) as? Data {
             if let hosts = NSKeyedUnarchiver.unarchiveObject(with: decoded) as? [Host] {
                 return hosts
